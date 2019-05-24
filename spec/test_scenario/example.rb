@@ -3,12 +3,12 @@ require 'date'
 
 describe 'Preconditions' do
 
-  before (:all) do
+  before(:all) do
     $caps_chrome['chromeOptions']['mobileEmulation'] = {'deviceName' => 'iPhone 5'}
     # Capybara.current_session.driver.browser.manage.window.resize_to(320,568)
   end
 
-  after (:all) do
+  after(:all) do
     Capybara.current_session.driver.quit
     # Capybara.current_session.driver.browser.manage.window.resize_to(1024,640)
   end
@@ -35,11 +35,11 @@ describe 'Preconditions' do
 
         find(:xpath, ta('773:venus:subsection:filter:S', "//label[.//span[text()='S (4-6)']]")).click
         finish_step_2 = Time.now
-        puts time_step_1 = "time of step 2, seconds: #{(finish_step_2 - finish_step_1).to_i}"
+        puts time_step_2 = "time of step 2, seconds: #{(finish_step_2 - finish_step_1).to_i}"
 
         find(:xpath, ta('773:venus:subsection:filter:view_results', "//button[contains(., 'View Results')]")).click
         finish_step_3 = Time.now
-        puts time_step_1 = "time of step 3, seconds: #{(finish_step_3 - finish_step_2).to_i}"
+        puts time_step_3 = "time of step 3, seconds: #{(finish_step_3 - finish_step_2).to_i}"
       end
 
       sleep 5
