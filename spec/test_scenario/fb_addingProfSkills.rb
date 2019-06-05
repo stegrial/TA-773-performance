@@ -29,6 +29,7 @@ describe 'Preconditions' do
 
         sleep 5
         start_step_2 = Time.now
+        # click fbTimelineSection About in Top Section
         find(:xpath, ta('performanse:FB:aboutBtn', "(//a[text()='About'])[1]")).click
         finish_step_5 = Time.now
         puts time_step_5 = "time of step 5, seconds: #{(finish_step_5 - finish_step_4).to_i}"
