@@ -33,16 +33,22 @@ describe 'Preconditions' do
         finish_step_1 = Time.now
         puts time_step_1 = "time of step 1, seconds: #{(finish_step_1 - start_step_1).to_i}"
 
+        sleep 5
+        start_step_2 = Time.now
+
         find(:xpath, ta('773:venus:subsection:filter:S', "//label[.//span[text()='S (4-6)']]")).click
         finish_step_2 = Time.now
-        puts time_step_2 = "time of step 2, seconds: #{(finish_step_2 - finish_step_1).to_i}"
+        puts time_step_2 = "time of step 2, seconds: #{(finish_step_2 - start_step_2).to_i}"
+
+        sleep 5
+        start_step_3 = Time.now
 
         find(:xpath, ta('773:venus:subsection:filter:view_results', "//button[contains(., 'View Results')]")).click
         finish_step_3 = Time.now
-        puts time_step_3 = "time of step 3, seconds: #{(finish_step_3 - finish_step_2).to_i}"
+        puts time_step_3 = "time of step 3, seconds: #{(finish_step_3 - start_step_3).to_i}"
       end
 
-      sleep 5
+      sleep 3
     end
   end
 end
