@@ -35,11 +35,11 @@ describe 'Preconditions' do
 
     scenario 'Searching', speed: true do
 
-      visit 'https://www.venus.com/products.aspx?BRANCH=7~63~'
-      sleep 10
-      start_step_1 = Time.now
+      2.times do
+        visit 'https://www.venus.com/products.aspx?BRANCH=7~63~'
+        sleep 10
+        start_step_1 = Time.now
 
-      1.times do
         find(:xpath, ta('signature_updating:venus:subsection:filter', "//button[.//span[text()='Filter']]")).click
         finish_step_1 = Time.now
         puts time_step_1 = "time of step 1, seconds: #{(finish_step_1 - start_step_1).to_i}"
