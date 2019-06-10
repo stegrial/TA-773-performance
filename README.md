@@ -22,3 +22,9 @@ bundle install
 ```bash
 spec spec/features/example_spec.rb
 ```
+
+* API key of cloud :
+
+```bash
+759729e5-9f31-43a6-8f1d-b7f9be6ce128
+```
