@@ -4,7 +4,7 @@ describe 'Preconditions' do
         Capybara.current_session.driver.quit
     end
     feature 'TrueAutomation.IO capybara example' do
-        scenario 'OLX product category selection' selenium: true do
+        scenario 'OLX product category selection', selenium: true do
             # User goes to the main page of the site
             visit 'https://www.olx.ua/'
 
@@ -42,7 +42,7 @@ describe 'Preconditions' do
 
         end
 
-        scenario 'Searching: OLX product category selection' speed: true do
+        scenario 'Searching: OLX product category selection', speed: true do
 
             2.times do
             # User goes to the main page of the site
@@ -82,5 +82,6 @@ describe 'Preconditions' do
 
             sleep 3
         end
-     end
+        end
+    end
 end
