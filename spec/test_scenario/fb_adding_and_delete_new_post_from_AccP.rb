@@ -169,7 +169,6 @@ describe 'Preconditions' do
           x.report('step 3:') { find(:xpath, ta('signature_updating:FB:enter', "//label[@id='loginbutton']")).click}
           sleep 5
 
-          p "-------------------------- Analizator -----------------------"
           # User clicks on the profile button
           x.report('step 4:') { find(:xpath, ta('signature_updating:FB::gotoAccPage', "//span[text()='Mark']")).click }
           sleep 5
@@ -200,17 +199,17 @@ describe 'Preconditions' do
           p "-------------------------- Analizator -----------------------"
           # User clicks delete button to accept deleting
           x.report('step 10:') { find(:xpath, ta('signature_updating:FB:acceptDelete', "//button[text()='Delete']")).click }
-          sleep 5
-          p "-------------------------- Analizator -----------------------"
+          sleep 7
 
           # User clicks navigation  button to log out
           x.report('step 11:') { find(:xpath, ta('signature_updating:FB:navigationLabel', "//div[@id='userNavigationLabel']")).click }
           sleep 5
 
+          p "-------------------------- Analizator -----------------------"
           # User clicks logout button
           x.report('step 12:') { find(:xpath, ta('signature_updating:FB:logout', "//a//span[text()='Log Out']")).click }
           end
-          # Capybara.current_session.driver.quit
+          Capybara.current_session.driver.quit
         end
       sleep 5
     end

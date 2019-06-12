@@ -74,7 +74,6 @@ describe 'Preconditions' do
               p "-------------------------- Analizator -----------------------"
               # User clicks oт the twelfth product from the list
               x.report('step 4:') { find(:xpath, ta('signature_updating:olx:product_page:product', "//ul[@class='gallerywide clr normal ']/li[12]")).click }
-              p "-------------------------- Analizator -----------------------"
 
               sleep 3
             end
