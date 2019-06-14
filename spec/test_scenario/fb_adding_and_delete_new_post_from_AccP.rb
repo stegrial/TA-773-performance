@@ -229,7 +229,7 @@ feature 'Testing the speed of Analyzer on the large DOM tree and testing the sig
       sleep 5
 
       # User clicks on the profile button
-      x.report('step 4:') { find(:xpath, ta('signature_updating:FB::gotoAccPage', "//span[text()='Mark']")).click }
+      x.report('step 4:') { find(:xpath, ta('signature_updating:FB:gotoAccPage', "//span[text()='Mark']")).click }
       sleep 5
 
       expect(page).to have_selector(:xpath, "//img[@alt='your Profile Photo']", visible: true)
@@ -270,7 +270,5 @@ feature 'Testing the speed of Analyzer on the large DOM tree and testing the sig
       x.report('step 12:') { find(:xpath, ta('signature_updating:FB:logout', "//a//span[text()='Log Out']")).click }
       end
     end
-
-    sleep 5
   end
 end
