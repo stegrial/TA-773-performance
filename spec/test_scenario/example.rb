@@ -37,7 +37,7 @@ describe 'Preconditions' do
       sleep 3
     end
 
-    scenario 'Recording', ta: true do
+    scenario 'Recording', ta_record: true do
 
       # User goes to the main page of the site Venus
       visit 'https://www.venus.com'
@@ -59,19 +59,19 @@ describe 'Preconditions' do
       sleep 5
 
       # User check the S size
-      x.report('step 1:') { find(:xpath, ta('signature_updating:venus:subsection:filter:S', "//label[.//span[text()='S (4-6)']]")).click }
+      x.report('step 2:') { find(:xpath, ta('signature_updating:venus:subsection:filter:S', "//label[.//span[text()='S (4-6)']]")).click }
       sleep 5
 
       # User clicks on the View Results button
-      x.report('step 1:') { find(:xpath, ta('signature_updating:venus:subsection:filter:view_results', "//button[contains(., 'View Results')]")).click }
+      x.report('step 3:') { find(:xpath, ta('signature_updating:venus:subsection:filter:view_results', "//button[contains(., 'View Results')]")).click }
 
       end
       sleep 3
     end
 
-    scenario 'Searching', ta: true do
+    scenario 'Searching', ta_search: true do
 
-      2.times do
+      1.times do
         visit 'https://www.venus.com/products.aspx?BRANCH=7~63~'
         sleep 10
 
